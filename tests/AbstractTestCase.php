@@ -38,7 +38,7 @@ abstract class AbstractTestCase extends TestCase
             getenv('REDIS_HOST') ?? '127.0.0.1',
             getenv('REDIS_PORT') ?? 6379
         );
-        $client->select(getenv('REDIS_DB') ?? 0);
+        // $client->select(getenv('REDIS_DB') ?? 0);
         return new RedisClient($client);
     }
 
